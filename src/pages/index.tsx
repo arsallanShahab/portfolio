@@ -1,7 +1,7 @@
 import { ABOUT_ME, ARSALLAN, MUHAMMAD, SHAHAB } from "@/lib/CONSTANTS";
 import { randomNum } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { FC, useRef } from "react";
+import { FC } from "react";
 
 interface Props {}
 

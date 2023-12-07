@@ -1,4 +1,3 @@
-import { spring, useVariants } from "@/components/mouse-config";
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";

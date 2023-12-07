@@ -1,5 +1,4 @@
 import Heading from "@/components/heading";
-import SkillsButton from "@/components/skills-button";
 import {
   SiExpress,
   SiGit,
