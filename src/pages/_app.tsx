@@ -217,6 +217,23 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:image"
           content="https://www.arsallanshahab.me/favicon/apple-touch-icon.png"
         />
+        <link rel="canonical" href="https://www.arsallanshahab.me" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@arsallan_se" />
+        <meta name="twitter:creator" content="@arsallan_se" />
+        <meta
+          name="twitter:title"
+          content="Arsallan Shahab - Portfolio"
+          key="title"
+        />
+        <meta
+          name="twitter:description"
+          content="Arsallan Shahab is a full stack developer who is passionate about building web applications."
+        />
+        <meta
+          name="twitter:image"
+          content="https://pbs.twimg.com/profile_images/1705510360294608896/kf8ZR99F_400x400.jpg"
+        />
       </Head>
       <div ref={trailer} id="trailer" className="trailer">
         <div id="trailer-icon" data-type="link">
