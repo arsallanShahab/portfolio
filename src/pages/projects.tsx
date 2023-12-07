@@ -1,7 +1,7 @@
-import RandomFadeInText from "@/components/animate-paragraph";
 import Heading from "@/components/heading";
 import { ABOUT_ME_STRING } from "@/lib/CONSTANTS";
 import React from "react";
+import RandomFadeInText from "../../temp/animate-paragraph";
 
 type Props = {};
 
