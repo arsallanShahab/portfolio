@@ -5,6 +5,7 @@ import { useWindowWidth } from "@react-hook/window-size";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
@@ -181,6 +182,42 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <AnimatePresence mode="wait">
+      <Head>
+        <title>Arsallan Shahab - Portfolio</title>
+        <meta
+          name="description"
+          content="Arsallan Shahab is a full stack developer who is passionate about building web applications."
+        />
+        <meta
+          name="keywords"
+          content="Arsallan Shahab, Arsallan, Shahab, Arsallan Shahab Portfolio, Arsallan Shahab Website, Arsallan Shahab Developer, Arsallan Shahab Full Stack Developer, Arsallan Shahab Full Stack Developer Portfolio, Arsallan Shahab Full Stack Developer Website, Arsallan Shahab Full Stack Developer Websi
+          te Portfolio,Arsalan Shahab, Arsalan, Shahab, Arsalan Shahab Portfolio, Arsalan Shahab Website, Arsalan Shahab Developer, Arsalan Shahab Full Stack Developer, Arsalan Shahab Full Stack Developer Portfolio, Arsalan Shahab Full Stack Developer Website, Arsalan Shahab Full Stack Developer Websi
+          te Portfolio, Arsallan Shahab MERN Stack Developer, Arsallan Shahab MERN Stack Developer Portfolio, Arsallan Shahab MERN Stack Developer Website"
+        />
+        <meta name="author" content="Arsallan Shahab" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#cdfa89" />
+        <meta name="msapplication-TileColor" content="#cdfa89" />
+        <link rel="manifest" href="/favicon/manifest.json" />
+        <link rel="icon" href="/favicon/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          href="/favicon/apple-touch-icon.png"
+          sizes="180x180" //for apple devices
+        />
+        <meta property="og:title" content="Arsallan Shahab - Portfolio" />
+        <meta
+          property="og:description"
+          content="Arsallan Shahab is a full stack developer who is passionate about building web applications."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.arsallanshahab.me" />
+        <meta property="og:site_name" content="Arsallan Shahab - Portfolio" />
+        <meta
+          property="og:image"
+          content="https://www.arsallanshahab.me/favicon/apple-touch-icon.png"
+        />
+      </Head>
       <div ref={trailer} id="trailer" className="trailer">
         <div id="trailer-icon" data-type="link">
           <ArrowUpRight size={9} className="text-brand-dark-shade-light-2" />
