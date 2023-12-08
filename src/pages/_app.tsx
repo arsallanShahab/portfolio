@@ -183,16 +183,15 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AnimatePresence mode="wait">
       <Head>
-        <title>Arsallan Shahab - Portfolio</title>
+        <title>Arsallan Shahab</title>
         <meta
           name="description"
-          content="Arsallan Shahab is a full stack developer who is passionate about building web applications."
+          content="A sophomore student building stuffs for the web 🧑🏻‍💻"
         />
         <meta
           name="keywords"
           content="Arsallan Shahab, Arsallan, Shahab, Arsallan Shahab Portfolio, Arsallan Shahab Website, Arsallan Shahab Developer, Arsallan Shahab Full Stack Developer, Arsallan Shahab Full Stack Developer Portfolio, Arsallan Shahab Full Stack Developer Website, Arsallan Shahab Full Stack Developer Websi
-          te Portfolio,Arsalan Shahab, Arsalan, Shahab, Arsalan Shahab Portfolio, Arsalan Shahab Website, Arsalan Shahab Developer, Arsalan Shahab Full Stack Developer, Arsalan Shahab Full Stack Developer Portfolio, Arsalan Shahab Full Stack Developer Website, Arsalan Shahab Full Stack Developer Websi
-          te Portfolio, Arsallan Shahab MERN Stack Developer, Arsallan Shahab MERN Stack Developer Portfolio, Arsallan Shahab MERN Stack Developer Website"
+          te Portfolio,Arsalan Shahab, Arsalan, Shahab, Arsalan Shahab Portfolio, Arsalan Shahab Website, Arsalan Shahab Developer, Arsalan Shahab Full Stack Developer, Arsalan Shahab Full Stack Developer Portfolio, Arsalan Shahab Full Stack Developer Website, Arsalan Shahab Full Stack Developer Website Portfolio, Arsallan Shahab MERN Stack Developer, Arsallan Shahab MERN Stack Developer Portfolio, Arsallan Shahab MERN Stack Developer Website, Arsalan, Shahab, Arsalan Shahab MERN Stack Developer, Arsalan Shahab MERN Stack Developer Portfolio, Arsalan Shahab MERN Stack Developer Website"
         />
         <meta name="author" content="Arsallan Shahab" />
         <meta name="robots" content="index, follow" />
@@ -203,37 +202,33 @@ export default function App({ Component, pageProps }: AppProps) {
         <link
           rel="apple-touch-icon"
           href="/favicon/apple-touch-icon.png"
-          sizes="180x180" //for apple devices
+          sizes="180x180"
         />
-        <meta property="og:title" content="Arsallan Shahab - Portfolio" />
+        <meta property="og:title" content="Arsallan Shahab" />
         <meta
           property="og:description"
-          content="Arsallan Shahab is a full stack developer who is passionate about building web applications."
+          content="A sophomore student building stuffs for the web 🧑🏻‍💻"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.arsallanshahab.me" />
-        <meta property="og:site_name" content="Arsallan Shahab - Portfolio" />
+        <meta property="og:site_name" content="Arsallan Shahab" />
         <meta
           property="og:image"
-          content="https://www.arsallanshahab.me/favicon/apple-touch-icon.png"
+          content="https://www.arsallanshahab.me/avatar.jpg"
         />
-        <link rel="canonical" href="https://www.arsallanshahab.me" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@arsallan_se" />
         <meta name="twitter:creator" content="@arsallan_se" />
-        <meta
-          name="twitter:title"
-          content="Arsallan Shahab - Portfolio"
-          key="title"
-        />
+        <meta name="twitter:title" content="Arsallan Shahab" />
         <meta
           name="twitter:description"
-          content="Arsallan Shahab is a full stack developer who is passionate about building web applications."
+          content="A sophomore student building stuffs for the web 🧑🏻‍💻"
         />
         <meta
           name="twitter:image"
-          content="https://pbs.twimg.com/profile_images/1705510360294608896/kf8ZR99F_400x400.jpg"
+          content="https://pbs.twimg.com/profile_banners/1194193593268764673/1697227257/1080x360"
         />
+        <link rel="canonical" href="https://www.arsallanshahab.me" />
       </Head>
       <div ref={trailer} id="trailer" className="trailer">
         <div id="trailer-icon" data-type="link">
