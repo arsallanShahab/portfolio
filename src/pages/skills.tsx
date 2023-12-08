@@ -179,7 +179,7 @@ const CHILD_VARIANT = {
 
 const Skills: React.FC<Props> = ({}) => {
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-start justify-start gap-2.5 bg-brand-dark px-5 py-10 pt-28 sm:px-10">
+    <div className="relative flex min-h-screen w-full flex-col items-start justify-start gap-2.5 bg-[#040405] px-5 py-10 pt-28 sm:px-10">
       <Heading>Skills</Heading>
 
       <motion.div className="relative flex w-full flex-col sm:p-5">
@@ -197,7 +197,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiPython
               // color={"default"}
@@ -213,7 +213,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiReact
               // color={"default"}
@@ -229,7 +229,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiNextdotjs
               // color={"default"}
@@ -245,7 +245,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiTailwindcss
               // color={"default"}
@@ -261,7 +261,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiNodedotjs
               // color={"default"}
@@ -277,7 +277,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiExpress
               // color={"default"}
@@ -293,7 +293,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiMongodb
               // color={"default"}
@@ -309,7 +309,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiPrisma
               // color={"default"}
@@ -325,7 +325,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiGit
               // color={"default"}
@@ -341,7 +341,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiGithub
               // color={"default"}
@@ -357,7 +357,7 @@ const Skills: React.FC<Props> = ({}) => {
               transition: "background 200ms ease",
             }}
             data-type="skill"
-            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/5 text-white backdrop-blur-xl hover:bg-white/10"
+            className="interactable group relative z-[200] flex h-24 w-full cursor-none items-center justify-center gap-2.5 rounded-[4px] bg-white/0 text-white backdrop-blur-xl hover:bg-white/0"
           >
             <SiHeroku
               // color={"default"}
