@@ -1,183 +1,10 @@
 import { ABOUT_ME, ARSALLAN, MUHAMMAD, SHAHAB } from "@/lib/CONSTANTS";
+import { framerConfig } from "@/lib/framer-config";
 import { randomNum } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { FC } from "react";
 
 interface Props {}
-
-const PARENT_VARIANTS_1 = {
-  initial: {
-    transition: {},
-  },
-  animate: {
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.05,
-    },
-  },
-  exit: {
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const PARENT_VARIANTS_2 = {
-  initial: {
-    transition: {},
-  },
-  animate: {
-    transition: {
-      delayChildren: 1.25,
-      staggerChildren: 0.04,
-    },
-  },
-  exit: {
-    transition: {
-      staggerChildren: 0.04,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const PARENT_VARIANTS_3 = {
-  initial: {
-    transition: {},
-  },
-  animate: {
-    transition: {
-      delayChildren: 2.25,
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-  exit: {
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: 1,
-    },
-  },
-};
-
-const PARENT_VARIANTS_4 = {
-  initial: {
-    opacity: 1,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      delayChildren: 2.4,
-      // staggerChildren: 0.02,
-      staggerDirection: 1,
-    },
-  },
-};
-const PARENT_VARIANTS_5 = {
-  initial: {
-    opacity: 0,
-    scaleX: 0,
-    transformOrigin: "left",
-  },
-  animate: {
-    opacity: 1,
-    scaleX: 1,
-    transformOrigin: "left",
-    transition: {
-      duration: 0.5,
-      delayChildren: 5.35,
-      delay: 5,
-      staggerChildren: 0.02,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-};
-
-const CHILD_VARIANTS_1 = {
-  initial: {
-    opacity: 0,
-    y: -100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.75,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 100,
-    transition: {
-      duration: 0.75,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-};
-
-const CHILD_VARIANTS_2 = {
-  initial: {
-    opacity: 0,
-    y: 200,
-    // scaleY: 0,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    // scaleY: 1,
-    transition: {
-      duration: 0.8,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -100,
-    transition: {
-      duration: 0.8,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-};
-
-const CHILD_VARIANTS_3 = {
-  initial: {
-    opacity: 0,
-    y: -100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.75,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 100,
-    transition: {
-      duration: 0.75,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-};
-const CHILD_VARIANTS_4 = {
-  initial: {
-    opacity: 0,
-    transformOrigin: "left",
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transformOrigin: "left",
-    transition: {
-      duration: 0.75,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-};
 
 const Home: FC<Props> = (props) => {
   return (
@@ -228,13 +55,13 @@ const Home: FC<Props> = (props) => {
               })}
             </motion.div>
             <motion.div
-              variants={PARENT_VARIANTS_5}
+              variants={framerConfig.PARENT_VARIANTS_5}
               initial="initial"
               animate="animate"
               className="mt-5 rounded-3xl bg-brand-light-green px-4 py-1 text-brand-dark"
             >
               <motion.a
-                variants={CHILD_VARIANTS_4}
+                variants={framerConfig.CHILD_VARIANTS_4}
                 href="mailto:mdarsallan@gmail.com"
                 className="font-bricolage text-base font-bold text-brand-dark"
               >
@@ -247,7 +74,7 @@ const Home: FC<Props> = (props) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              variants={PARENT_VARIANTS_1}
+              variants={framerConfig.PARENT_VARIANTS_1}
               className="relative flex w-full justify-start text-center font-pixelify leading-[1.75]"
             >
               {MUHAMMAD.map((letter, index) => {
@@ -255,7 +82,7 @@ const Home: FC<Props> = (props) => {
                   <motion.span
                     key={index}
                     className="whitespace-nowrap font-pixelify text-6xl font-extrabold leading-[0.75] text-white sm:pl-3"
-                    variants={CHILD_VARIANTS_1}
+                    variants={framerConfig.CHILD_VARIANTS_1}
                   >
                     {letter}
                   </motion.span>
@@ -266,7 +93,7 @@ const Home: FC<Props> = (props) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              variants={PARENT_VARIANTS_2}
+              variants={framerConfig.PARENT_VARIANTS_2}
               className="flex w-full justify-center sm:justify-start  "
             >
               {ARSALLAN.map((letter, index) => {
@@ -274,7 +101,7 @@ const Home: FC<Props> = (props) => {
                   <motion.span
                     key={index}
                     className="font-pixelify text-[18vw] font-extrabold leading-[0.75] text-brand-light-green sm:text-[18.5vw]"
-                    variants={CHILD_VARIANTS_2}
+                    variants={framerConfig.CHILD_VARIANTS_2}
                   >
                     {letter}
                   </motion.span>
@@ -285,14 +112,14 @@ const Home: FC<Props> = (props) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              variants={PARENT_VARIANTS_3}
+              variants={framerConfig.PARENT_VARIANTS_3}
               className="relative flex w-full justify-end text-center font-pixelify leading-[1.75]"
             >
               {SHAHAB.map((letter, index) => {
                 return (
                   <motion.span
                     key={index}
-                    variants={CHILD_VARIANTS_3}
+                    variants={framerConfig.CHILD_VARIANTS_3}
                     className="whitespace-nowrap font-pixelify text-6xl font-extrabold leading-[0.75] text-white"
                   >
                     {letter}

@@ -1,4 +1,6 @@
 import Navbar from "@/components/navbar";
+import { sentences } from "@/lib/CONSTANTS";
+import { framerConfig } from "@/lib/framer-config";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { useWindowWidth } from "@react-hook/window-size";
@@ -9,94 +11,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
-const container = {
-  hidden: {
-    scale: 1,
-    transition: {
-      staggerChildren: 0.15,
-      staggerDirection: -1,
-    },
-  },
-  show: {
-    scale: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-//scale from 0 to 1 and back
-const item = {
-  hidden: {
-    scaleY: 0,
-    transition: {
-      ease: [0.87, 0, 0.13, 1],
-      duration: 0.65,
-    },
-  },
-  show: {
-    scaleY: 1,
-    transition: {
-      ease: [0.87, 0, 0.13, 1],
-      duration: 1.2,
-    },
-  },
-};
-
-const DATASET_ENUMS = {
-  DEFAULT: "default",
-  LINK: "link",
-  VIDEO: "video",
-};
-
-const sentences = [
-  [
-    { word: "a", color: "bg-gray-900" },
-    { word: "software", color: "bg-gray-700" },
-    { word: "engineer", color: "bg-gray-500" },
-  ],
-  [
-    { word: "a full", color: "bg-[#0e0218]" },
-    { word: "stack", color: "bg-[#480878]" },
-    { word: "developer", color: "bg-[#810ed8]" },
-  ],
-  [
-    { word: "passionate", color: "bg-[#190009]" },
-    { word: "frontend", color: "bg-[#7d022b]" },
-    { word: "developer", color: "bg-[#e2044d]" },
-  ],
-  [
-    //generate for backend developer in 3 words and 3 colors
-    { word: "java, nodejs", color: "bg-[#0f1801]" },
-    { word: "backend", color: "bg-[#4c7a05]" },
-    { word: "developer", color: "bg-[#88dc09]" },
-  ],
-  [
-    { word: "mern", color: "bg-[#000814]" },
-    { word: "stack", color: "bg-[#003380]" },
-    { word: "developer", color: "bg-[#005ce6]" },
-  ],
-];
-
-const SHAPES = [
-  "polygon(50% 0%, 0% 100%, 100% 100%)",
-  "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
-  "circle(50% at 50% 50%)",
-  "ellipse(49% 29% at 50% 50%)",
-];
-
-const COLORS = [
-  //light colors
-  "#ff0000",
-  "#ff8000",
-  "#ffff00",
-  "#80ff00",
-  "#00ff00",
-];
-
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const [basePath, setBasePath] = useState(router.pathname);
+  const [basePath, setBasePath] = useState<String>(router.pathname);
   const [sentenceIndex, setSentenceIndex] = useState(0);
   const trailer = useRef<HTMLDivElement>(null);
 
@@ -118,8 +35,8 @@ export default function App({ Component, pageProps }: AppProps) {
     let interactables: HTMLElement | null;
     let interacting: boolean = false;
 
-    const x = e.clientX - trailer.current.offsetWidth / 2 + 20;
-    const y = e.clientY - trailer.current.offsetHeight / 2 + 20;
+    const x: Number = e.clientX - trailer.current.offsetWidth / 2 + 20;
+    const y: Number = e.clientY - trailer.current.offsetHeight / 2 + 20;
 
     if (trailer.current) {
       if (e.target instanceof HTMLElement) {
@@ -139,24 +56,16 @@ export default function App({ Component, pageProps }: AppProps) {
         dot.classList.add("dot");
         dot.style.left = `${e.clientX - dot.offsetWidth - 10}px`;
         dot.style.top = `${e.clientY - dot.offsetHeight - 10}px`;
-
         document.body.appendChild(dot);
-
         dot.animate(
           [
             {
               opacity: 1,
               transform: "scale(1)",
             },
-            {
-              // opacity: 0,
-              transform: "scale(0)",
-            },
+            { transform: "scale(0)" },
           ],
-          {
-            duration: i * 300,
-            fill: "forwards",
-          },
+          { duration: i * 300, fill: "forwards" },
         ).onfinish = () => {
           dot.remove();
         };
@@ -183,52 +92,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AnimatePresence mode="wait">
       <Head>
-        <title>Arsallan Shahab</title>
-        <meta
-          name="description"
-          content="A sophomore student building stuffs for the web 🧑🏻‍💻"
-        />
-        <meta
-          name="keywords"
-          content="Arsallan Shahab, Arsallan, Shahab, Arsallan Shahab Portfolio, Arsallan Shahab Website, Arsallan Shahab Developer, Arsallan Shahab Full Stack Developer, Arsallan Shahab Full Stack Developer Portfolio, Arsallan Shahab Full Stack Developer Website, Arsallan Shahab Full Stack Developer Websi
-          te Portfolio,Arsalan Shahab, Arsalan, Shahab, Arsalan Shahab Portfolio, Arsalan Shahab Website, Arsalan Shahab Developer, Arsalan Shahab Full Stack Developer, Arsalan Shahab Full Stack Developer Portfolio, Arsalan Shahab Full Stack Developer Website, Arsalan Shahab Full Stack Developer Website Portfolio, Arsallan Shahab MERN Stack Developer, Arsallan Shahab MERN Stack Developer Portfolio, Arsallan Shahab MERN Stack Developer Website, Arsalan, Shahab, Arsalan Shahab MERN Stack Developer, Arsalan Shahab MERN Stack Developer Portfolio, Arsalan Shahab MERN Stack Developer Website"
-        />
-        <meta name="author" content="Arsallan Shahab" />
-        <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#cdfa89" />
-        <meta name="msapplication-TileColor" content="#cdfa89" />
-        <link rel="manifest" href="/favicon/manifest.json" />
-        <link rel="icon" href="/favicon/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          href="/favicon/apple-touch-icon.png"
-          sizes="180x180"
-        />
-        <meta property="og:title" content="Arsallan Shahab" />
-        <meta
-          property="og:description"
-          content="A sophomore student building stuffs for the web 🧑🏻‍💻"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.arsallanshahab.me" />
-        <meta property="og:site_name" content="Arsallan Shahab" />
-        <meta
-          property="og:image"
-          content="https://www.arsallanshahab.me/avatar.jpg"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@arsallan_se" />
-        <meta name="twitter:creator" content="@arsallan_se" />
-        <meta name="twitter:title" content="Arsallan Shahab" />
-        <meta
-          name="twitter:description"
-          content="A sophomore student building stuffs for the web 🧑🏻‍💻"
-        />
-        <meta
-          name="twitter:image"
-          content="https://pbs.twimg.com/profile_banners/1194193593268764673/1697227257/1080x360"
-        />
-        <link rel="canonical" href="https://www.arsallanshahab.me" />
+        <title>
+          Arsallan Shahab{" "}
+          {router.pathname === "/" ? "" : "| " + router.pathname.slice(1)}
+        </title>
       </Head>
       <div ref={trailer} id="trailer" className="trailer">
         <div id="trailer-icon" data-type="link">
@@ -239,7 +106,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <motion.div
         key={router.pathname}
-        variants={container}
+        variants={framerConfig.APP_ANIMATION_PARENT}
         initial="show"
         animate="hidden"
         exit="show"
@@ -249,7 +116,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <motion.div
           className="fixed inset-0 z-[970] h-full w-full origin-top overflow-hidden"
-          variants={item}
+          variants={framerConfig.APP_ANIMATION_CHILD}
         >
           <h1
             className={cn(
@@ -262,7 +129,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </motion.div>
         <motion.div
           className="fixed inset-0 z-[980] h-full w-full origin-top overflow-hidden"
-          variants={item}
+          variants={framerConfig.APP_ANIMATION_CHILD}
         >
           <h1
             className={cn(
@@ -275,7 +142,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </motion.div>
         <motion.div
           className="fixed inset-0 z-[990] h-full w-full origin-top overflow-hidden"
-          variants={item}
+          variants={framerConfig.APP_ANIMATION_CHILD}
         >
           <h1
             className={cn(
